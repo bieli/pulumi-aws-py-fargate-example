@@ -6,8 +6,8 @@ import json
 
 vpc = aws.ec2.Vpc("main", cidr_block="10.0.0.0/16")
 
-subnet_a = aws.ec2.Subnet("subnet-a", vpc_id=vpc.id, cidr_block="10.0.1.0/24", availability_zone='us-east-1a' )
-subnet_b = aws.ec2.Subnet("subnet-b", vpc_id=vpc.id, cidr_block="10.0.2.0/24", availability_zone='us-east-1b' )
+subnet_a = aws.ec2.Subnet("subnet-a", vpc_id=vpc.id, cidr_block="10.0.1.0/24", availability_zone='eu-central-1a' )
+subnet_b = aws.ec2.Subnet("subnet-b", vpc_id=vpc.id, cidr_block="10.0.2.0/24", availability_zone='eu-central-1b' )
 
 igw = aws.ec2.InternetGateway("ig-main", vpc_id=vpc.id)
 
